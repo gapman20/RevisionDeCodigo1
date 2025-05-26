@@ -4,7 +4,8 @@ const $n = document.querySelector('name');
 const $b = document.querySelector('#blog');
 const $l = document.querySelector('.location');
 
-function displayUser(username) {
+/* Se cambio la funcion sincrona a una funcion asincrona debido a que esta utilizando un await  */
+async function displayUser(username) {
   $n.textContent = 'cargando...';
   const response = await fetch(`${usersEndpoint}/${username}`);
   console.log(data);
